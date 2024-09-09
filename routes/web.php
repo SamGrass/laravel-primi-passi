@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $title = 'Primo Progetto Laravel';
+    $animals = ["Cane", "Gatto", "Elefante", "Leone", "Tigre", "Cavallo", "Mucca", "Pinguino"];
+    // $cars = ["Ferrari", "Lamborghini", "BMW", "Mercedes", "Audi", "Tesla", "Fiat", "Ford"];
+    $cars = [];
+
+    return view('home', compact('animals', 'cars', 'title'));
 });
