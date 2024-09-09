@@ -11,6 +11,19 @@
 <body>
     <div class="container my-5 text-center">
         <h1 class="mb-4">{{ $title }}</h1>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" href="/animals">Animali</a>
+                        <a class="nav-link" href="/cars">Macchine</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar fin -->
         <div class="d-flex justify-content-around">
             <div>
                 <h2 class="mb-4">Elenco animali:</h2>

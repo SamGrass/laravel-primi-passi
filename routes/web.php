@@ -19,6 +19,16 @@ Route::get('/', function () {
     $animals = ["Cane", "Gatto", "Elefante", "Leone", "Tigre", "Cavallo", "Mucca", "Pinguino"];
     // $cars = ["Ferrari", "Lamborghini", "BMW", "Mercedes", "Audi", "Tesla", "Fiat", "Ford"];
     $cars = [];
-
     return view('home', compact('animals', 'cars', 'title'));
+});
+
+Route::get('/animals', function () {
+    $animals = ["Cane", "Gatto", "Elefante", "Leone", "Tigre", "Cavallo", "Mucca", "Pinguino"];
+    return view('animals', compact('animals'));
+});
+
+Route::get('/cars', function () {
+    // $cars = ["Ferrari", "Lamborghini", "BMW", "Mercedes", "Audi", "Tesla", "Fiat", "Ford"];
+    $cars = [];
+    return view('cars', compact('cars'));
 });
