@@ -9,8 +9,32 @@
 </head>
 
 <body>
-    <div class="container my-5">
-        <h1>Ciao</h1>
+    <div class="container my-5 text-center">
+        <h1 class="mb-4">{{ $title }}</h1>
+        <div class="d-flex justify-content-around">
+            <div>
+                <h2 class="mb-4">Elenco animali:</h2>
+                <ul>
+                    @foreach ($animals as $animal )
+                    <li>{{ $animal }}</li>
+                    @endforeach
+                </ul>
+            </div>
+
+            <div>
+                @if (!empty($cars))
+                <h2>Elenco macchine</h2>
+                <ul>
+                    @foreach ($cars as $car)
+                    <li>{{ $car }}</li>
+                    @endforeach
+                </ul>
+                @else
+                <h2>Nessuna macchina in elenco</h2>
+                @endif
+            </div>
+        </div>
+
     </div>
 </body>
 
